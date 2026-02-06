@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Bolillero de examen</title>
+</head>
+<body>
+
+<h2>Bolillero de examen</h2>
+
+<button onclick="sortear1()">Bolilla 1</button>
+<button onclick="sortear2()">Bolilla 2</button>
+
+<p><strong>Resultado Bolilla 1:</strong> <span id="res1"></span></p>
+<p><strong>Resultado Bolilla 2:</strong> <span id="res2"></span></p>
+
+<script>
+  let temas = [
+    "Tema 1: FECUNDACION",
+    "Tema 2: 1° SEMANA DEL DESARROLLO",
+    "Tema 3: 2° SEMANA DEL DESARROLLO",
+    "Tema 4: 3° SEMANA DEL DESARROLLO",
+    "Tema 5: ANEXOS EXTRAEMBRIONARIOS",
+    "Tema 6: EMBARAZOS MULTIPLES",
+    "Tema 7: CICLO MENSTRUAL",
+    "Tema 8: SISTEMA MUSCULOESQUELETICO",
+    "Tema 10: DESARROLLO DE LOS MIEMBROS",
+    "Tema 11: SISTEMA CIRCULATORIO",
+    "Tema 12: SISTEMA INMUNITARIO",
+    "Tema 13: HEMATOPOYESIS PRENATAL",
+    "Tema 14: CARA - NARIZ - BOCA",
+    "Tema 15: SISTEMA RESPIRATORIO",
+    "Tema 16: SISTEMA DIGESTIVO",
+    "Tema 17: SISTEMA URINARIO",
+    "Tema 18: SISTEMA GENITAL",
+    "Tema 19: SISTEMA NERVIOSO",
+    "Tema 20: DIAGNOSTICO PRENATAL",
+  ];
+
+  function sortear1() {
+    if (temas.length === 0) return;
+    const i = Math.floor(Math.random() * temas.length);
+    document.getElementById("res1").innerText = temas[i];
+    temas.splice(i, 1);
+  }
+
+  function sortear2() {
+    if (temas.length === 0) return;
+    const i = Math.floor(Math.random() * temas.length);
+    document.getElementById("res2").innerText = temas[i];
+    temas.splice(i, 1);
+  }
+</script>
+
+</body>
+</html>
